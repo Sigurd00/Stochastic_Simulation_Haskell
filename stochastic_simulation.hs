@@ -1,9 +1,15 @@
+import Data.Foldable (minimumBy)
+-- Define data structures for reactions and state
+data Reaction = Reaction {
+    inputs :: [(String, Int)],
+    products :: [(String, Int)],
+    rate :: Double
+} deriving (Show)
 
--- TODO 1 Define data structure for reactions and state
+type State = [(String, Int)]
 -- TODO 2 Define compute delay function
 -- TODO 3 Define execute reaction function
 -- TODO 4 Define simulation loop
-
 
 
 main :: IO ()
